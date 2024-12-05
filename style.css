@@ -120,11 +120,7 @@ nav {
         margin-left: 90%; /* Empuja el ícono de menú a la derecha */
     }
 
-    /* Hacer la imagen dentro de .nav-logo más grande en pantallas pequeñas */
-    .nav-logo img {
-        width: 200px; /* Ajusta este valor al tamaño que deseas */
-        height: auto; /* Mantener la proporción de la imagen */
-    }
+   
 }
 
 @media (max-width: 480px) {
@@ -140,11 +136,7 @@ nav {
         font-size: 20px;
     }
 
-    /* Hacer la imagen dentro de .nav-logo más grande en pantallas más pequeñas */
-    .nav-logo img {
-        width: 200px; /* Ajusta este valor al tamaño que deseas */
-        height: auto; /* Mantener la proporción de la imagen */
-    }
+   
 }
 
 
@@ -221,7 +213,7 @@ nav {
     }
 
     .nav-logo {
-        flex-grow: 1; /* Esto permitirá que el logo ocupe todo el espacio disponible */
+        flex-grow: 100%; /* Esto permitirá que el logo ocupe todo el espacio disponible */
     }
 
     .menu-toggle {
