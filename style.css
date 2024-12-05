@@ -1,4 +1,4 @@
-
+/* El estilo base del menú */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,10 @@ body {
 nav {
     background-color: #333;
     color: #fff;
-    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -22,14 +25,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
-
-
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-menu li {
@@ -39,7 +41,7 @@ nav {
 .nav-menu a {
     text-decoration: none;
     color: #fff;
-    padding: 8px 12px;
+    
     display: block;
     transition: background-color 0.3s;
 }
@@ -58,7 +60,6 @@ nav {
     padding: 10px 0;
     display: none;
     min-width: 150px;
-    z-index: 1000;
 }
 
 .submenu li {
@@ -80,35 +81,6 @@ nav {
     cursor: pointer;
 }
 
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-   
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color: #f4eeee;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #6a7073;
-}
-
 /* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
     .nav-container {
@@ -124,11 +96,11 @@ footer {
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        display: none;
+        display: none; /* Ocultamos el menú por defecto */
     }
 
     .nav-menu.show {
-        display: block;
+        display: block; /* Mostrar el menú cuando está activo */
     }
 
     .nav-menu a {
@@ -149,21 +121,13 @@ footer {
 
     .menu-toggle {
         display: block;
-    }
-
-    footer {
-        text-align: center;
-        
-    }
-
-    .social-icons {
-        gap: 10px;
+        margin-left: 90%; /* Empuja el ícono de menú a la derecha */
     }
 }
 
 @media (max-width: 480px) {
     .nav-container {
-        padding: 10px;
+        padding: 1px;
     }
 
     .nav-logo {
@@ -179,53 +143,7 @@ footer {
         font-size: 20px;
     }
 }
-.menu-container {
-    display: flex;
-}
 
-.menu-toggle {
-    margin-left: auto; /* Empuja el ícono a la derecha */
-    padding: 10px; /* Espaciado opcional */
-}
-
-/* El contenido principal debe tomar el espacio restante */
-.content {
-flex-grow: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
-}
-
-
-
-
-
-
-
-nav {
-    display: flex;
-    justify-content: space-between; /* Espacio entre el logo y el menú */
-    align-items: center; /* Alineación vertical centrada */
-    background-color: #333; /* Fondo del nav */
-    position: fixed; /* Nav fijo en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
-   
-}
-
-.nav-logo {
-    width: 200px; /* Ancho del contenedor (ajústalo según lo necesites) */
-    height: 100px; /* Alto del contenedor (ajústalo según lo necesites) */
-    background-image: url('img/icono.png'); /* Ruta de la imagen */
-    background-size: contain; /* Ajusta la imagen dentro del contenedor sin distorsionar */
-    background-position: center; /* Centra la imagen dentro del contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
-
-
-h1{
-    color: #fefefe;    
-}
 
 .imagen {
     width: 100%; /* El contenedor ocupará todo el ancho de la pantalla */
@@ -260,3 +178,28 @@ h1{
     z-index: -1; /* Coloca la capa debajo del texto */
 }
 
+.nav-logo {
+    width: 250px; /* Ancho del contenedor (ajústalo según lo necesites) */
+    height: 100px; /* Alto del contenedor (ajústalo según lo necesites) */
+    background-image: url('img/icono.png'); /* Ruta de la imagen */
+    background-size: contain; /* Ajusta la imagen dentro del contenedor sin distorsionar */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #f4eeee;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #6a7073;
+}
