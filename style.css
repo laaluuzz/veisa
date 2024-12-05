@@ -1,0 +1,279 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 8px 16px;
+}
+
+.nav-menu li:hover .submenu {
+    display: block;
+}
+
+/* Estilo para el botón de menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+   
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #f4eeee;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #6a7073;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: block;
+    }
+
+    .nav-menu a {
+        padding: 10px 15px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu li:hover .submenu {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    footer {
+        text-align: center;
+        
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 10px;
+    }
+
+    .nav-logo {
+        margin-top: 5rem;
+        font-size: 1.2em;
+    }
+
+    .nav-menu {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+.menu-container {
+    display: flex;
+}
+
+.menu-toggle {
+    margin-left: auto; /* Empuja el ícono a la derecha */
+    padding: 10px; /* Espaciado opcional */
+}
+
+/* El contenido principal debe tomar el espacio restante */
+.content {
+flex-grow: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+}
+
+
+.imagen {
+    width: 100%; /* El contenedor ocupará todo el ancho de la pantalla */
+    height: 100vh; /* El contenedor ocupará todo el alto de la pantalla */
+    background-image: url('img/Soldadura.png'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; /* La imagen se centrará dentro del contenedor */
+    background-repeat: no-repeat; /* No se repetirá la imagen */
+    background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
+    
+    /* Para hacer la imagen más transparente */
+    position: relative; /* Necesario para agregar una capa encima */
+}
+
+.imagen::after {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Color negro con opacidad de 0.3 (ajustable) */
+    z-index: 3; /* Asegura que la capa de transparencia esté encima de la imagen */
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Alineación vertical centrada */
+    background-color: #333; /* Fondo del nav */
+    position: fixed; /* Nav fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+   
+}
+
+.nav-logo img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 200px; /* Puedes ajustar el tamaño del logo según sea necesario */
+  
+}
+
+h1{
+    color: #fefefe;    
+}
+
+.imagen {
+    width: 100%; /* El contenedor ocupará todo el ancho de la pantalla */
+    height: 100vh; /* El contenedor ocupará todo el alto de la pantalla */
+    background-image: url('img/Soldadura.png'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; /* La imagen se centrará dentro del contenedor */
+    background-repeat: no-repeat; /* No se repetirá la imagen */
+    background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
+    
+    /* Para hacer la imagen más transparente */
+    position: relative; /* Necesario para agregar una capa encima */
+
+    display: flex; /* Usamos flex para alinear los elementos dentro del contenedor */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    align-items: center; /* Centrar verticalmente el contenido */
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color de texto blanco para mejorar la legibilidad */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    font-size: 24px; /* Tamaño de la fuente */
+    z-index: 0; /* Para asegurarnos de que el texto esté sobre la imagen */
+}
+
+.imagen::after {
+    content: ''; /* Crea un pseudo-elemento vacío */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Color negro con opacidad de 0.4 (ajustable) */
+    z-index: -1; /* Coloca la capa debajo del texto */
+}
