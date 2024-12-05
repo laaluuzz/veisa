@@ -1,7 +1,6 @@
 /* El estilo base del menú */
 * {
-    margin: 0;
-    padding: 0;
+   
     box-sizing: border-box;
 }
 
@@ -25,13 +24,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    padding: 10px 20px;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-menu li {
@@ -41,7 +40,7 @@ nav {
 .nav-menu a {
     text-decoration: none;
     color: #fff;
-    
+    padding: 8px 12px;
     display: block;
     transition: background-color 0.3s;
 }
@@ -88,9 +87,7 @@ nav {
         align-items: flex-start;
     }
 
-    .nav-logo {
-        margin-bottom: 10px;
-    }
+    
 
     .nav-menu {
         flex-direction: column;
@@ -130,10 +127,7 @@ nav {
         padding: 1px;
     }
 
-    .nav-logo {
-        margin-top: 5rem;
-        font-size: 1.2em;
-    }
+    
 
     .nav-menu {
         font-size: 14px;
@@ -179,7 +173,7 @@ nav {
 }
 
 .nav-logo {
-    width: 250px; /* Ancho del contenedor (ajústalo según lo necesites) */
+    width: 150px; /* Ancho del contenedor (ajústalo según lo necesites) */
     height: 100px; /* Alto del contenedor (ajústalo según lo necesites) */
     background-image: url('img/icono.png'); /* Ruta de la imagen */
     background-size: contain; /* Ajusta la imagen dentro del contenedor sin distorsionar */
