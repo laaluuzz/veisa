@@ -16,6 +16,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    
 }
 
 .nav-container {
@@ -24,13 +25,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-menu li {
@@ -173,7 +174,7 @@ nav {
 }
 
 .nav-logo {
-    width: 150px; /* Ancho del contenedor (ajústalo según lo necesites) */
+    width: 250px; /* Ancho del contenedor (ajústalo según lo necesites) */
     height: 100px; /* Alto del contenedor (ajústalo según lo necesites) */
     background-image: url('img/icono.png'); /* Ruta de la imagen */
     background-size: contain; /* Ajusta la imagen dentro del contenedor sin distorsionar */
